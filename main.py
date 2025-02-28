@@ -16,7 +16,7 @@ nltk.download("stopwords")
 df = pd.read_csv("spam.csv", encoding="latin-1")
 
 # Drop unnecessary columns and rename important ones (modify if needed)
-df = df.iloc[:, :2]  # Keep only first two columns
+df = df.iloc[:, :2]  
 df.columns = ["label", "text"]
 df["label"] = df["label"].map({"ham": 0, "spam": 1})  # Convert labels to binary
 
